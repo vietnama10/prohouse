@@ -17,7 +17,8 @@ class CreateProductAttributeTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('input_type');
-            $table->boolean('active');
+            $table->integer('active');
+            $table->integer('required');
             $table->string('default_value');
             $table->timestamps();
         });

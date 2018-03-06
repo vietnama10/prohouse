@@ -16,17 +16,19 @@ class Categories extends Seeder
             [
                 'name' => 'Apartment for rent',
                 'description' => 'Apartment for rent in Ho Chi Minh City',
-                'image' => 'category.png',
+                'image' => 'images/categories/category.png',
                 'sort_order' => 0,
-                'display' => 1,
+                'display_menu' => 1,
+                'is_featured' => 0,
                 'parent_id' => 0
             ],
             [
                 'name' => 'Apartment for sale',
                 'description' => 'Apartment for sale in Ho Chi Minh City',
-                'image' => 'category.png',
+                'image' => 'images/categories/category.png',
                 'sort_order' => 1,
-                'display' => 1,
+                'display_menu' => 1,
+                'is_featured' => 0,
                 'parent_id' => 0
             ]
         ]);
