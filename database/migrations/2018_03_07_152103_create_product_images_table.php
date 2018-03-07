@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDataConfigTable extends Migration
+class CreateProductImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateDataConfigTable extends Migration
      */
     public function up()
     {
-        Schema::create('data_config', function (Blueprint $table) {
+        Schema::create('product_images', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('code');
-            $table->string('value');
+            $table->string('image');
+            $table->integer('is_thumnail');
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')
+                ->references('id')->on('products')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateDataConfigTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_config');
+        Schema::dropIfExists('product_images');
     }
 }
