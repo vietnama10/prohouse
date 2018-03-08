@@ -1,3 +1,18 @@
+<?php 
+use App\Type;
+use App\Project;
+
+$type = new Type();
+$project = new Project();
+
+?>
+@foreach($menu_result as $key => $value)
+    {{$key.":"}}
+    @foreach($value as $vl)
+    {{$vl}}
+    @endforeach
+    <br/>
+@endforeach
 <!-- header -->
 <div class="header-wrapper">
     <div class="container">
@@ -42,7 +57,25 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
+                            @foreach($menu_result as $key => $value)
+                                @if(count($value) > 0)
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            {{$type->getTypeById($key)->name}}
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            @foreach($value as $vl)
+                                                <a class="dropdown-item" href="#">{{$project->getProjectById($vl)->name}}</a>
+                                            @endforeach
+                                        </div>
+                                    </li>
+                                @else
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">{{$type->getTypeById($key)->name}}<span class="sr-only">(current)</span></a>
+                                    </li>
+                                @endif
+                            @endforeach
+<!--                            <li class="nav-item active">
                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
@@ -61,7 +94,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" href="#">Disabled</a>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </nav>
