@@ -8,18 +8,21 @@
       <ul class="nav navbar-nav navbar-right">
          <li class="">
          <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="images/img.jpg" alt="">John Doe
+            <img src="public/images/admin.png" alt="">
+            @if(isset($login_user))
+                {{$login_user->name}}
+            @endif
             <span class=" fa fa-angle-down"></span>
          </a>
          <ul class="dropdown-menu dropdown-usermenu pull-right">
             <li><a href="javascript:;"> Profile</a></li>
-            <li>
+<!--            <li>
                <a href="javascript:;">
                <span class="badge bg-red pull-right">50%</span>
                <span>Settings</span>
                </a>
             </li>
-            <li><a href="javascript:;">Help</a></li>
+            <li><a href="javascript:;">Help</a></li>-->
             <li><a href="admin_1a1u/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
          </ul>
          </li>
@@ -32,7 +35,7 @@
          <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
             <li>
                <a>
-               <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+               <span class="image"><img src="public/images/img.jpg" alt="Profile Image" /></span>
                <span>
                   <span>John Smith</span>
                   <span class="time">3 mins ago</span>
@@ -44,7 +47,7 @@
             </li>
             <li>
                <a>
-               <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+               <span class="image"><img src="public/images/img.jpg" alt="Profile Image" /></span>
                <span>
                   <span>John Smith</span>
                   <span class="time">3 mins ago</span>
@@ -56,7 +59,7 @@
             </li>
             <li>
                <a>
-               <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+               <span class="image"><img src="public/images/img.jpg" alt="Profile Image" /></span>
                <span>
                   <span>John Smith</span>
                   <span class="time">3 mins ago</span>
@@ -68,7 +71,7 @@
             </li>
             <li>
                <a>
-               <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+               <span class="image"><img src="public/images/img.jpg" alt="Profile Image" /></span>
                <span>
                   <span>John Smith</span>
                   <span class="time">3 mins ago</span>

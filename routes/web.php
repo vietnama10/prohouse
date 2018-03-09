@@ -26,7 +26,11 @@ Route::get('admin_1a1u/logout','Admin\AdminController@LogOut');
 
 // Admin Route
 Route::group(['prefix'=>'admin_1a1u', 'middleware'=>'adminlogin'],function(){
-	Route::get('/', function(){
+    Route::get('/', function(){
         return view('admin.pages.home');
+    });
+    // Group Route for Type
+    Route::group(['prefix'=>'type'],function(){
+        
     });
 });

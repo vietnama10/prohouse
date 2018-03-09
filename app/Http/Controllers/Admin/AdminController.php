@@ -9,6 +9,14 @@ use Auth;
 class AdminController extends Controller
 {
     //
+    protected $user;
+    public function __construct()
+    {
+        $this->user = Auth::user();
+
+        view()->share('current_user', $this->user);
+    }
+    
     public function getAdminLogin(){
         if(Auth::check()){
             return redirect('admin_1a1u');

@@ -16,7 +16,11 @@ class ComposerServiceProvider extends ServiceProvider
         //
         view()->composer(
             'customer.master.header',
-            'App\Http\ViewComposers\TypeComposer'
+            'App\Http\ViewComposers\MenuComposer'
+        );
+        view()->composer(
+            ['admin.master.top-navbar', 'admin.master.left-sidebar'],
+            'App\Http\ViewComposers\Admin\ProfileComposer'
         );
     }
 

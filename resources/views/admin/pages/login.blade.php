@@ -30,6 +30,11 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
+            @if(session('error-message'))
+                <div class="alert alert-danger">
+                        {{session('error-message')}}
+                </div>
+            @endif
             <form method="POST" action="admin_1a1u/checklogin">
               <h1>Login Admin</h1>
               <input type="hidden" name="_token" value="{{csrf_token()}}" />

@@ -12,7 +12,7 @@ use Illuminate\View\View;
 use App\Type;
 use App\TypeProject;
 
-class TypeComposer
+class MenuComposer
 {
     protected $types;
     protected $type_projects;

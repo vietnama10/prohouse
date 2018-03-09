@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/customer/master/header.blade.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/ViewComposers/TypeComposer.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/TypeProject.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/config/app.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Helpers/LayoutHelper.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Type.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Controllers/LayoutController.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Controllers/Admin/AdminController.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/master/top-navbar.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Middleware/AdminLoginMiddleware.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/ViewComposers/Admin/ProfileComposer.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/ViewComposers/MenuComposer.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/routes/web.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/master/left-sidebar.blade.php</file>
             <file>file:/D:/Xampp/htdocs/prohouse/app/Providers/ComposerServiceProvider.php</file>
         </group>
     </open-files>
