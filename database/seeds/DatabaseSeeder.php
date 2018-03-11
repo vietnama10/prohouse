@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(Projects::class);
         $this->call(TypeProject::class);
         $this->call(Products::class);
+        $this->call(ProductImages::class);
     }
 }

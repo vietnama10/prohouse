@@ -16,32 +16,32 @@ class Projects extends Seeder
             [
                 'name' => 'Green Valley',
                 'description' => 'Green valley description',
-                'url' => 'green-valley'
+                'url_key' => 'green-valley'
             ],
             [
                 'name' => 'My Gia',
                 'description' => 'My Gia description',
-                'url' => 'my-gia'
+                'url_key' => 'my-gia'
             ],
             [
                 'name' => 'Phu My Hung',
                 'description' => 'Phu My Hung description',
-                'url' => 'phu-my-hung'
+                'url_key' => 'phu-my-hung'
             ],
             [
                 'name' => 'Green Valley',
                 'description' => 'Green valley description',
-                'url' => 'green-valley'
+                'url_key' => 'green-valley'
             ],
             [
                 'name' => 'Sky Garden',
                 'description' => 'Sky Garden description',
-                'url' => 'sky-garden'
+                'url_key' => 'sky-garden'
             ],
             [
                 'name' => 'My Hoang',
                 'description' => 'My Hoang description',
-                'url' => 'my-hoang'
+                'url_key' => 'my-hoang'
             ]
         ]);
     }

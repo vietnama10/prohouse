@@ -10,12 +10,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('customer.pages.home');
-});
+//Frontend Route
+Route::get('/', 'HomeController@index');
+
 
 /*
-|*  Tuk Tuk Food
+|* Pro House
 |*	Admin Dashboard
 |*/
 
@@ -24,7 +24,7 @@ Route::get('admin_1a1u/login','Admin\AdminController@getAdminLogin');
 Route::post('admin_1a1u/checklogin','Admin\AdminController@checkAdminLogin');
 Route::get('admin_1a1u/logout','Admin\AdminController@LogOut');
 
-// Admin Route
+// Backend Route
 Route::group(['prefix'=>'admin_1a1u', 'middleware'=>'adminlogin'],function(){
     Route::get('/', function(){
         return view('admin.pages.home');

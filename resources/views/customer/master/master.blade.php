@@ -12,6 +12,7 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="public/css/bootstrap.min.css">
         <link rel="stylesheet" href="public/css/styles.css">
+        <link rel="stylesheet" href="public/css/styles-custom.css">
         @yield('css')
         
 	<!-- END JAVASCRIPT -->

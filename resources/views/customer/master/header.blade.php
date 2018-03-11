@@ -38,8 +38,8 @@ $project = new Project();
             <div class="row">
                 <!-- logo -->
                 <div id="logo" class="col-sm-3">
-                    <a href="https://placeholder.com">
-                        <img src="http://via.placeholder.com/350x150" class="img-fluid">
+                    <a href="#">
+                        <img src="public/images/logo.png" class="img-fluid">
                     </a>
                 </div>
                 <!-- navigation -->
