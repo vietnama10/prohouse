@@ -8,13 +8,13 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+              <img class="d-block w-100" src="./public/images/slides/slide-1.jpeg" alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="Second slide">
+              <img class="d-block w-100" src="./public/images/slides/slide-2.jpeg" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="Third slide">
+              <img class="d-block w-100" src="./public/images/slides/slide-3.jpeg" alt="Third slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -37,6 +37,269 @@
         <!-- blocks show property -->
         <div id="top-properties" class="row block">
           <h2>Top Properties</h2>
+          <div class="row">
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+          </div>
+          <span class="see-more"><a href="#">See more...</a></span>
+        </div>
+        <!-- blocks show property -->
+        <div id="for-rent" class="row block">
+          <h2>For rent</h2>
+          <div class="row">
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+          </div>
+          <span class="see-more"><a href="#">See more...</a></span>
+        </div>
+        <!-- blocks show property -->
+        <div id="for-sale" class="row block">
+          <h2>For sale</h2>
+          <div class="row">
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+            <div class="col-sm product-box rounded">
+              <h3>House's name will be here</h3>
+              <figure class="row">
+                <div class="col">
+                  <img src="./public/images/products/product-demo.jpeg" class="img-fluid">
+                </div>
+                <div class="col">
+                  <p class="price rounded-right">Price: 100$</p>
+                  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ...</p>
+                  <span class="see-more"><a href="#">More details</a></span>
+                </div>
+              </figure>
+              <div class=" row product-properties">
+                <span class="col">Area</span>
+                <span class="col">Bedroom</span>
+                <span class="col">Bathroom</span>
+                <span class="col">Garages</span>
+              </div>
+            </div>
+          </div>
+          <span class="see-more"><a href="#">See more...</a></span>
         </div>
         <!-- features -->
         <div id="features" class="row block">
