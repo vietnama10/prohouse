@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Controllers/Admin/AdminController.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/master/top-navbar.blade.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Middleware/AdminLoginMiddleware.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/ViewComposers/Admin/ProfileComposer.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/ViewComposers/MenuComposer.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/pages/product/list.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Controllers/Admin/ProductController.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/master/master.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/database/migrations/2018_03_07_151917_create_products_table.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/pages/home.blade.php</file>
             <file>file:/D:/Xampp/htdocs/prohouse/routes/web.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/master/footer.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/pages/product/create.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/database/seeds/Products.php</file>
             <file>file:/D:/Xampp/htdocs/prohouse/resources/views/admin/master/left-sidebar.blade.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Providers/ComposerServiceProvider.php</file>
         </group>
     </open-files>
 </project-private>

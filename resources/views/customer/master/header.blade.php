@@ -6,13 +6,6 @@ $type = new Type();
 $project = new Project();
 
 ?>
-@foreach($menu_result as $key => $value)
-    {{$key.":"}}
-    @foreach($value as $vl)
-    {{$vl}}
-    @endforeach
-    <br/>
-@endforeach
 <!-- header -->
 <div class="header-wrapper">
     <div class="container">

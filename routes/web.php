@@ -33,4 +33,12 @@ Route::group(['prefix'=>'admin_1a1u', 'middleware'=>'adminlogin'],function(){
     Route::group(['prefix'=>'type'],function(){
         
     });
+    // Group Route for Project
+    Route::group(['prefix'=>'project'],function(){
+        
+    });
+    // Group Route for Product
+    Route::group(['prefix'=>'product'],function(){
+        Route::get('/', 'Admin\ProductController@getProductList');
+    });
 });
