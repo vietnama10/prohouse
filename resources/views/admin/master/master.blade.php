@@ -7,13 +7,13 @@
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <base href="{{secure_asset('')}}" >
+        <base href="{{scure_asset('')}}" >
         <!-- VENDOR CSS -->
 
         <!-- Bootstrap -->
         <link href="public/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
-        <link href="public/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!--        <link href="public/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
         <!-- NProgress -->
         <link href="public/vendors/nprogress/nprogress.css" rel="stylesheet">
         <!-- iCheck -->
@@ -49,6 +49,7 @@
         <script src="public/vendors/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap -->
         <script src="public/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script defer src="public/js/font-awesome.js"></script>
         <!-- FastClick -->
         <script src="public/vendors/fastclick/lib/fastclick.js"></script>
         <!-- NProgress -->
