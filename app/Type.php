@@ -8,6 +8,10 @@ class Type extends Model
 {
     //
     protected $tabble = 'types';
+
+    public function products(){
+        return $this->hasMany('App\Product');
+    }
     
     public function getAll(){
         return self::all();

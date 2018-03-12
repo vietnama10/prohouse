@@ -74,45 +74,51 @@
             <span class="see-more"><a href="#">See more...</a></span>
         </div>
         
-        <!--block Apartment for sale-->
-        <div id="top-properties" class="row block">
-            <h2>Apartment For Sale</h2>
-            <div class="row">
-                @foreach($products as $product)
-                <div class="col-sm-6 product-item rounded">
-                    <div class="product-box-content">
-                        <h3>{{$product->name}}</h3>
-                        <figure class="row">
-                            <div class="col">
-                                <?php
-                                $thumnail = "";
-                                foreach($product->images as $img){
-                                    if($img->is_thumnail == 1){
-                                        $thumnail = $img->image;
-                                    }
-                                }
-                                ?>
-                                <img src="./public/images/products/{{$thumnail}}" class="img-fluid">
-                            </div>
-                            <div class="col">
-                                <p class="price rounded-right">Price: ${{ $product->price }}</p>
-                                <p class="description">{!! $product->description !!}</p>
-                                <span class="see-more"><a href="{{ $product->url_key }}">More details</a></span>
-                            </div>
-                        </figure>
-                        <div class=" row product-properties">
-                            <span class="col"><strong>Size: </strong>{{$product->size}} sqm</span>
-                            <span class="col"><strong>Bedroom: </strong>{{$product->bedroom}}</span>
-                            <span class="col"><strong>Bathroom: </strong>{{$product->bathroom}}</span>
-                            <span class="col"><strong>Level: </strong>{{$product->level}}</span>
-                        </div>
-                    </div>
+        <!--block products by type-->
 
-                </div>
-                @endforeach
-            </div>
-            <span class="see-more"><a href="#">See more...</a></span>
-        </div>
+            @foreach($products_by_type as $data)
+               @if(count($data['products']) > 0)
+                    <div id="top-properties" class="row block">
+                        <h2>{{ $data['type_name'] }}</h2>
+                        <div class="row">
+                            @foreach($data['products'] as $product)
+                            <div class="col-sm-6 product-item rounded">
+                                <div class="product-box-content">
+                                    <h3>{{$product->name}}</h3>
+                                    <figure class="row">
+                                        <div class="col">
+                                            <?php
+                                            $thumnail = "";
+                                            foreach($product->images as $img){
+                                                if($img->is_thumnail == 1){
+                                                    $thumnail = $img->image;
+                                                }
+                                            }
+                                            ?>
+                                            <img src="./public/images/products/{{$thumnail}}" class="img-fluid">
+                                        </div>
+                                        <div class="col">
+                                            <p class="price rounded-right">Price: ${{ $product->price }}</p>
+                                            <p class="description">{!! $product->description !!}</p>
+                                            <span class="see-more"><a href="{{ $product->url_key }}">More details</a></span>
+                                        </div>
+                                    </figure>
+                                    <div class=" row product-properties">
+                                        <span class="col"><strong>Size: </strong>{{$product->size}} sqm</span>
+                                        <span class="col"><strong>Bedroom: </strong>{{$product->bedroom}}</span>
+                                        <span class="col"><strong>Bathroom: </strong>{{$product->bathroom}}</span>
+                                        <span class="col"><strong>Level: </strong>{{$product->level}}</span>
+                                    </div>
+                                </div>
+            
+                            </div>
+                            @endforeach
+                        </div>
+                        <span class="see-more"><a href="{{ $data['type_url'] }}">See more...</a></span>
+                    </div>
+                @endif
+            @endforeach
+       
         
         <!-- features -->
         <div id="features" class="row block">
