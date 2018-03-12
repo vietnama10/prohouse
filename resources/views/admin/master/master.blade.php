@@ -11,7 +11,8 @@
         <!-- VENDOR CSS -->
 
         <!-- Bootstrap -->
-        <link href="public/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link href="public/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- Font Awesome -->
 <!--        <link href="public/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
         <!-- NProgress -->
