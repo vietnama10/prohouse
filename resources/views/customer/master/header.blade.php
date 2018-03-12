@@ -38,7 +38,7 @@ $project = new Project();
             <div class="row">
                 <!-- logo -->
                 <div id="logo" class="col-sm-3">
-                    <a href="#">
+                    <a href="{{url('/')}}">
                         <img src="public/images/logo.png" class="img-fluid">
                     </a>
                 </div>
@@ -53,12 +53,12 @@ $project = new Project();
                             @foreach($menu_result as $key => $value)
                                 @if(count($value) > 0)
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle" href="{{$type->getTypeById($key)->url_key}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             {{$type->getTypeById($key)->name}}
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             @foreach($value as $vl)
-                                                <a class="dropdown-item" href="#">{{$project->getProjectById($vl)->name}}</a>
+                                                <a class="dropdown-item" href="{{$type->getTypeById($key)->url_key.'/'.$project->getProjectById($vl)->url_key}}">{{$project->getProjectById($vl)->name}}</a>
                                             @endforeach
                                         </div>
                                     </li>
