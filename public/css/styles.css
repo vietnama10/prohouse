@@ -1,3 +1,7 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
 /*header background #252A2B
   header color #929A9B*/
 .header-wrapper {
@@ -34,13 +38,27 @@
 .block h2, .see-more {
 	width: 100%;
 }
+.block h2 {
+	color:  #394041;
+	font-weight: bold;
+	letter-spacing: .1em;
+}
 .product-box {
 	border: solid 1px #ddd;
 	margin: 15px 15px;
 	padding: 20px 0px 0px 0px;
 }
-.product-box h3 {
+.product-box h3 a {
 	padding: 0 10px;
+	font-size: 1.3rem;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	line-height: 1.7rem;
+	color: #394041;
+	display: block;
+}
+.product-box h3 a:hover {
+	text-decoration: none;
 }
 .product-box figure {
 	margin-right: 0;
