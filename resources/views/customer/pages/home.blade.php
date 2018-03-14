@@ -30,7 +30,14 @@
 </div>
 <!--/slide -->
 
-<!-- main page -->
+<!-- search form -->
+<div class="search-wrapper">
+    <div id="search" class="container">
+        @include('customer.master.search')
+    </div>
+</div>
+<!--/search form -->
+
 <!-- main page -->
 <div class="home-main-wrapper">
     <div id="home-main" class="container">
@@ -146,6 +153,5 @@
         </div>
     </div>
 </div>
-<!--/main page -->
 <!--/main page -->
 @endsection
