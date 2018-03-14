@@ -18,5 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TypeProject::class);
         $this->call(Products::class);
         $this->call(ProductImages::class);
+        $this->call(Attributes::class);
+        $this->call(AttributeValues::class);
     }
 }
