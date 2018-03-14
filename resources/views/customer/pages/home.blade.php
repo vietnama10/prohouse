@@ -46,11 +46,11 @@
             <h2>Top Properties</h2>
             <div class="row">
                 @foreach($products as $product)
-                <div class="col-sm-6 product-item rounded">
+                <div class="col-lg-6 product-item rounded">
                     <div class="product-box">
                         <h3><a href={{ $product->url_key }}"">{{$product->name}}</a></h3>
                         <figure class="row">
-                            <div class="col">
+                            <div class="col-sm">
                                 <?php
                                 $thumnail = "";
                                 foreach($product->images as $img){
@@ -61,7 +61,7 @@
                                 ?>
                                 <img src="./public/images/products/{{$thumnail}}" class="img-fluid">
                             </div>
-                            <div class="col">
+                            <div class="col-sm">
                                 <p class="price">Price: ${{ $product->price }}</p>
                                 <p class="description">{!! $product->description !!}</p>
                                 <span class="see-more"><a href="{{ $product->url_key }}">More details</a></span>
@@ -89,11 +89,11 @@
                         <h2>{{ $data['type_name'] }}</h2>
                         <div class="row">
                             @foreach($data['products'] as $product)
-                            <div class="col-sm-6 product-item rounded">
+                            <div class="col-lg-6 product-item rounded">
                                 <div class="product-box-content">
                                     <h3>{{$product->name}}</h3>
                                     <figure class="row">
-                                        <div class="col">
+                                        <div class="col-sm">
                                             <?php
                                             $thumnail = "";
                                             foreach($product->images as $img){
@@ -104,7 +104,7 @@
                                             ?>
                                             <img src="./public/images/products/{{$thumnail}}" class="img-fluid">
                                         </div>
-                                        <div class="col">
+                                        <div class="col-sm">
                                             <p class="price rounded-right">Price: ${{ $product->price }}</p>
                                             <p class="description">{!! $product->description !!}</p>
                                             <span class="see-more"><a href="{{ $product->url_key }}">More details</a></span>

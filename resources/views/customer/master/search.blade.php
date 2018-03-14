@@ -1,4 +1,4 @@
-<div class="search-head col-md-4">
+<div class="search-head col-lg-4">
   <span class="search-icon"><i class="fas fa-search"></i></span>
   <span><strong>Find Your Home</strong></span>
 </div>

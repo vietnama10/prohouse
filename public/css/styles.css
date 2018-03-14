@@ -47,7 +47,7 @@ body {
 .product-box {
 	border: solid 1px #ddd;
 	margin: 15px 15px;
-	padding: 20px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
 }
 .product-box h3 a {
 	padding: 0 10px;
@@ -66,7 +66,7 @@ body {
 	margin-left: 0;
 	padding: 0 15px;
 }
-.product-box figure .col {
+.product-box figure .col-sm {
 	padding: 0;
 }
 .price, .description, .see-more {
@@ -180,7 +180,7 @@ body {
 	padding-top: 15px;
 }
 #search {
-	position: relative;
+	/*position: relative;*/
 	padding-bottom: 15px;
 	border-bottom: solid 1px #dedede;
 }
@@ -191,8 +191,8 @@ body {
 	line-height: 50px;
 	font-size: 21px;
 	padding-left: 0;
-	position: absolute;
-	top: -65px;
+	/*position: absolute;
+	top: -65px;*/
 }
 .search-icon {
 	display: inline-block;
@@ -234,6 +234,13 @@ body {
 	.dropdown-toggle::after {
 		content: none;
 	}
+	#search {
+		position: relative;
+	}
+	.search-head {
+		position: absolute;
+		top: -65px;
+	}
 }
 
 @media only screen and (max-width: 990px) {
@@ -243,7 +250,30 @@ body {
 	#main-nav .nav-item {
 		padding: .3rem 1.5rem;
 	}
+	#main-nav .phone-number {
+		padding: 0;
+	}
 	#main-nav .dropdown-toggle {
 		float: right;
+	}
+	.search-wrapper {
+		padding-top: 0;
+	}
+	.search-head {
+		margin-bottom: 15px;
+	}
+	.search-btn {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.product-box figure {
+		padding: 0;
+	}
+	.product-box figure .col-sm {
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
 	}
 }
