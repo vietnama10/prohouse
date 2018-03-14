@@ -14,27 +14,27 @@ class AttributeValues extends Seeder
         //
         DB::table('attribute_values')->insert([
             [
-                'value' => 'full',
+                'value' => 'Fully Furnished',
                 'product_id' => 1,
                 'attribute_id' => 1
             ],
             [
-                'value' => 'full',
+                'value' => 'Fully Furnished',
                 'product_id' => 2,
                 'attribute_id' => 1
             ],
             [
-                'value' => 'part',
+                'value' => 'A Part Furnished',
                 'product_id' => 3,
                 'attribute_id' => 1
             ],
             [
-                'value' => 'none',
+                'value' => 'No Furniture',
                 'product_id' => 4,
                 'attribute_id' => 1
             ],
             [
-                'value' => 'part',
+                'value' => 'A Part Furnished',
                 'product_id' => 5,
                 'attribute_id' => 1
             ]

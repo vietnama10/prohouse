@@ -18,7 +18,7 @@ class Attributes extends Seeder
                 'input_type' => 'text',
                 'is_active' => 1,
                 'required' => 1,
-                'default_value' => 'a:3:{s:4:"full";s:15:"Fully Furnished";s:4:"none";s:12:"No Furniture";s:4:"part";s:16:"A part furnished";}'
+                'default_value' => 'a:3:{i:0;s:15:"Fully Furnished";i:1;s:16:"A Part Furnished";i:2;s:12:"No Furniture";}'
             ]
         ]);
     }

@@ -48,7 +48,7 @@
                 @foreach($products as $product)
                 <div class="col-sm-6 product-item rounded">
                     <div class="product-box">
-                        <h3><a href={{ $product->url_key }}"">{{$product->name}}</a></h3>
+                        <h3><a href="{{ $product->url_key }}">{{$product->name}}</a></h3>
                         <figure class="row">
                             <div class="col">
                                 <?php
