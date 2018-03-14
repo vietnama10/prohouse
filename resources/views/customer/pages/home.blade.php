@@ -33,7 +33,7 @@
 <!-- search form -->
 <div class="search-wrapper">
     <div id="search" class="container">
-        @include('customer.master.search')
+        @include('customer.pages.blocks.search_form')
     </div>
 </div>
 <!--/search form -->
@@ -48,7 +48,7 @@
                 @foreach($products as $product)
                 <div class="col-lg-6 product-item rounded">
                     <div class="product-box">
-                        <h3><a href={{ $product->url_key }}"">{{$product->name}}</a></h3>
+                        <h3><a href="{{ $product->url_key }}">{{$product->name}}</a></h3>
                         <figure class="row">
                             <div class="col-sm">
                                 <?php
