@@ -72,6 +72,7 @@
                             <span class="col"><strong>Bedroom: </strong>{{$product->bedroom}}</span>
                             <span class="col"><strong>Bathroom: </strong>{{$product->bathroom}}</span>
                             <span class="col"><strong>Level: </strong>{{$product->level}}</span>
+                            <span class="col"><strong>Interior: </strong>{{ App\AttributeValue::getAttrValByAttrIdAndProId('1', $product->id)['value'] }}</span>
                         </div>
                     </div>
 
