@@ -12,9 +12,11 @@
 
 //Frontend Route
 Route::get('/', 'HomeController@index');
-Route::get('{type_url_key}', 'CategoryController@getByType');
-Route::get('{type_url_key}/{project_url_key}', 'CategoryController@getByTypeAndProject');
-Route::get('{product_url_key}', 'ProductController@getProduct')->name('product');
+Route::group(['prefix'=>'category'],function(){
+    Route::get('{type_url_key}', 'CategoryController@getByType');
+    Route::get('{type_url_key}/{project_url_key}', 'CategoryController@getByTypeAndProject');
+});
+Route::get('product/{product_url_key}', 'ProductController@getProduct');
 
 /*
 |* Pro House

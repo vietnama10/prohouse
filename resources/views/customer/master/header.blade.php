@@ -52,20 +52,20 @@ $project = new Project();
                             @foreach($menu_result as $key => $value)
                                 @if(count($value) > 0)
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link" href="{{$type->getTypeById($key)->url_key}}">
+                                        <a class="nav-link" href="category/{{$type->getTypeById($key)->url_key}}">
                                             {{$type->getTypeById($key)->name}}
                                         </a>
-                                        <a class="nav-link dropdown-toggle disabled" href="{{$type->getTypeById($key)->url_key}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  
+                                        <a class="nav-link dropdown-toggle disabled" href="category/{{$type->getTypeById($key)->url_key}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             @foreach($value as $vl)
-                                                <a class="dropdown-item" href="{{$type->getTypeById($key)->url_key.'/'.$project->getProjectById($vl)->url_key}}">{{$project->getProjectById($vl)->name}}</a>
+                                                <a class="dropdown-item" href="category/{{$type->getTypeById($key)->url_key.'/'.$project->getProjectById($vl)->url_key}}">{{$project->getProjectById($vl)->name}}</a>
                                             @endforeach
                                         </div>
                                     </li>
                                 @else
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">{{$type->getTypeById($key)->name}}<span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="category/{{$type->getTypeById($key)->url_key}}">{{$type->getTypeById($key)->name}}<span class="sr-only">(current)</span></a>
                                     </li>
                                 @endif
                             @endforeach

@@ -36,7 +36,7 @@ class CategoryController extends Controller
                                   <li class="breadcrumb-item active" aria-current="page">'.$type->name.'</li>
                                 </ol>
                             </nav>';
-            return view('customer.pages.category', compact('products', 'type', 'breadcrumb', 'title'));
+            return view('customer.pages.category', compact('products', 'breadcrumb', 'title'));
         }else{
             return view('customer.pages.404');
         }
@@ -53,11 +53,11 @@ class CategoryController extends Controller
             $breadcrumb .= '<nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="'.$baseUrl.'">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="'.$baseUrl.'/'.$type->url_key.'">'.$type->name.'</a></li>
+                                    <li class="breadcrumb-item"><a href="'.$baseUrl.'/category/'.$type->url_key.'">'.$type->name.'</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">'.$project->name.'</li>
                                 </ol>
                             </nav>';
-            return view('customer.pages.category', compact('products', 'type', 'breadcrumb', 'title'));
+            return view('customer.pages.category', compact('products', 'breadcrumb', 'title'));
         }else{
             return view('customer.pages.404');
         }

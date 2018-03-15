@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/AttributeValue.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Product.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Attribute.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/ProductImage.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Controllers/HomeController.php</file>
-            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/customer/pages/home.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/customer/pages/product.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Controllers/ProductController.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/customer/pages/404.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/routes/web.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Controllers/CategoryController.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/customer/pages/category.blade.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/database/seeds/Products.php</file>
         </group>
     </open-files>
 </project-private>

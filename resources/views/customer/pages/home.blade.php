@@ -48,7 +48,7 @@
                 @foreach($products as $product)
                 <div class="col-lg-6 product-item rounded">
                     <div class="product-box">
-                        <h3><a href="{{ $product->url_key }}">{{$product->name}}</a></h3>
+                        <h3><a href="product/{{ $product->url_key }}">{{$product->name}}</a></h3>
                         <figure class="row">
                             <div class="col-sm">
                                 <?php
@@ -64,7 +64,7 @@
                             <div class="col-sm">
                                 <p class="price">Price: ${{ $product->price }}</p>
                                 <p class="description">{!! $product->description !!}</p>
-                                <span class="see-more"><a href="{{ $product->url_key }}">More details</a></span>
+                                <span class="see-more"><a href="product/{{ $product->url_key }}">More details</a></span>
                             </div>
                         </figure>
                         <div class=" row product-properties">
@@ -108,7 +108,7 @@
                                         <div class="col-sm">
                                             <p class="price rounded-right">Price: ${{ $product->price }}</p>
                                             <p class="description">{!! $product->description !!}</p>
-                                            <span class="see-more"><a href="{{ $product->url_key }}">More details</a></span>
+                                            <span class="see-more"><a href="product/{{ $product->url_key }}">More details</a></span>
                                         </div>
                                     </figure>
                                     <div class=" row product-properties">
