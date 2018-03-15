@@ -5,7 +5,9 @@
 <!-- main page -->
 <div class="home-main-wrapper">
     <div id="home-main" class="container">
-        {{$product_url_key}}
+        <div style="height: 300px; margin-top: 50px;">
+            <h2 style="text-align: center">404 ERROR!</h2>
+        </div>
     </div>
 </div>
 <!--/main page -->

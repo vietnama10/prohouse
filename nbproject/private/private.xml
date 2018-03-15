@@ -6,6 +6,9 @@
             <file>file:/D:/Xampp/htdocs/prohouse/app/AttributeValue.php</file>
             <file>file:/D:/Xampp/htdocs/prohouse/app/Product.php</file>
             <file>file:/D:/Xampp/htdocs/prohouse/app/Attribute.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/ProductImage.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/app/Http/Controllers/HomeController.php</file>
+            <file>file:/D:/Xampp/htdocs/prohouse/resources/views/customer/pages/home.blade.php</file>
         </group>
     </open-files>
 </project-private>
