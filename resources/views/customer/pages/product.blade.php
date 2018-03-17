@@ -18,7 +18,7 @@
             return;
         js = d.createElement(s);
         js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12&appId=1925279281046988&autoLogAppEvents=1';
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1925279281046988&autoLogAppEvents=1';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 <!-- main page -->
@@ -70,10 +70,7 @@
                 <p><strong>Address: </strong><span>{{$product->address}}</span></p>
                 <ul class="social">
                     <li>
-                        <div class="fb-share-button" 
-                            data-href="{{Request::fullUrl()}}" 
-                            data-layout="button_count">
-                        </div>
+                        <div id="shareBtn" class="btn btn-primary clearfix"><i class="fab fa-facebook"></i></div>
                     </li>
                 </ul>
             </div>
@@ -129,14 +126,12 @@
 
 <!--Facebook-->
 <script>
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id))
-            return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    document.getElementById('shareBtn').onclick = function () {
+        FB.ui({
+            method: 'share',
+            display: 'popup',
+            href: '{{Request::fullUrl()}}',
+        }, function (response) {});
+    }
 </script>
 @endsection
