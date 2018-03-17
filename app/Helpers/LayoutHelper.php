@@ -7,18 +7,12 @@
  */
 namespace App\Helpers;
 
-use App\TypeProject;
 class LayoutHelper{
-    protected $type_projects;
-    /**
-     * Create a movie composer.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $type_projects = new TypeProject();
-        $this->type_projects = $type_projects;
+    public static function product_price($price) {
+        $symbol = '$';
+        $symbol_thousand = ',';
+        $decimal_place = 0;
+        $price = number_format($price, $decimal_place, '', $symbol_thousand);
+        return $symbol.$price;
     }
-
 }

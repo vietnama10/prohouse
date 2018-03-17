@@ -62,7 +62,7 @@
                                 <img src="./public/images/products/{{$thumnail}}" class="img-fluid">
                             </div>
                             <div class="col-sm">
-                                <p class="price">Price: ${{ $product->price }}</p>
+                                <p class="price">Price: {{App\Helpers\LayoutHelper::product_price($product->price) }} / {{$product->unit}}</p>
                                 <p class="description">{!! $product->description !!}</p>
                                 <span class="see-more"><a href="product/{{ $product->url_key }}">More details</a></span>
                             </div>
@@ -106,7 +106,7 @@
                                             <img src="./public/images/products/{{$thumnail}}" class="img-fluid">
                                         </div>
                                         <div class="col-sm">
-                                            <p class="price rounded-right">Price: ${{ $product->price }}</p>
+                                            <p class="price rounded-right">Price: {{App\Helpers\LayoutHelper::product_price($product->price) }} / {{$product->unit}}</p>
                                             <p class="description">{!! $product->description !!}</p>
                                             <span class="see-more"><a href="product/{{ $product->url_key }}">More details</a></span>
                                         </div>

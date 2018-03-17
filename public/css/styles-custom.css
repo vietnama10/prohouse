@@ -32,39 +32,7 @@ and open the template in the editor.
     margin: 0 auto;
 }
 /* Slick Gallery */
-.slider-for{
-    width: 50%;
-    /*height: 250px;*/
-    margin: 30px auto 1px;
-    overflow: hidden;
-}
-img{
-    width: 100%;
-    min-height: 100%;
-}
-.slider-nav{
-    width: 500px;
-    height: 85px;
-    margin: auto;
-}
-.slider-nav .slick-track{
-    height: 85px;
-}
-.slick-arrow{
-    position: absolute;
-    top: 50%;
-    z-index: 50;
-    margin-top: -12px;
-}
-.slick-prev{
-    left: 0;
-}
-.slick-next{
-    right: 0;
-}
-.slick-prev:before, .slick-next:before{
-    color: black !important;
-}
+
 
 /* DesoSlide Gallery */
 #slideshow_thumbs{
@@ -74,5 +42,30 @@ img{
     display: inline-block;
 }
 #slideshow_thumbs img{
-    width: 120px;
+    width: 100px;
+}
+#slideshow img{
+    width: 100%;
+    min-height: 100%;
+}
+.right-column .basic-info ul{
+    padding: 0;
+}
+.right-column .basic-info li{
+    list-style-type: none;
+}
+.right-column .social{
+    padding: 0;
+}
+.right-column .social li{
+    display: inline-block;
+    list-style-type: none;
+    color: #333;
+    font-size: 32px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.right-column .social li a{
+    color: #333;
+    font-size: 32px;
 }

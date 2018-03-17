@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('description', '800');
             $table->float('price');
+            $table->string('unit');
             $table->float('size');
             $table->integer('level');
             $table->integer('bedroom');
