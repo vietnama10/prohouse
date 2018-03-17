@@ -17,6 +17,7 @@ Route::group(['prefix'=>'category'],function(){
     Route::get('{type_url_key}/{project_url_key}', 'CategoryController@getByTypeAndProject');
 });
 Route::get('product/{product_url_key}', 'ProductController@getProduct');
+Route::get('search', 'SearchController@getSearchResult');
 
 /*
 |* Pro House

@@ -2,7 +2,7 @@
 @section('title', $title)
 @section('Main')
 <!-- main page -->
-<div class="home-main-wrapper">
+<div id="search-result-page" class="home-main-wrapper">
     <div id="home-main" class="container">
         {!!$breadcrumb!!}
         <div id="top-properties" class="row block">
@@ -15,8 +15,8 @@
                             <div class="col-sm">
                                 <?php
                                 $thumnail = "";
-                                foreach($product->images as $img){
-                                    if($img->is_thumnail == 1){
+                                foreach ($product->images as $img) {
+                                    if ($img->is_thumnail == 1) {
                                         $thumnail = $img->image;
                                     }
                                 }
@@ -41,7 +41,7 @@
                 </div>
                 @endforeach
             </div>
-            <div class="col-xs-12">
+            <div class="col-sm-12">
                 {{ $products->links() }}
             </div>
         </div>
@@ -49,3 +49,4 @@
 </div>
 <!--/main page -->
 @endsection
+

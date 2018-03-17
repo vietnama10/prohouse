@@ -86,13 +86,13 @@
 
             @foreach($products_by_type as $data)
                @if(count($data['products']) > 0)
-                    <div id="top-properties" class="row block">
+                    <div id="type-data" class="row block">
                         <h2>{{ $data['type_name'] }}</h2>
                         <div class="row">
                             @foreach($data['products'] as $product)
                             <div class="col-lg-6 product-item rounded">
-                                <div class="product-box-content">
-                                    <h3>{{$product->name}}</h3>
+                                <div class="product-box">
+                                    <h3><a href="product/{{ $product->url_key }}">{{$product->name}}</a></h3>
                                     <figure class="row">
                                         <div class="col-sm">
                                             <?php
