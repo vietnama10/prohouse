@@ -4,8 +4,8 @@
 <!-- main page -->
 <div class="home-main-wrapper">
     <div id="home-main" class="container">
+        {!!$breadcrumb!!}
         <div id="top-properties" class="row block">
-            {!!$breadcrumb!!}
             <div class="row">
                 @foreach($products as $product)
                 <div class="col-lg-6 product-item rounded">

@@ -21,3 +21,58 @@ and open the template in the editor.
 .product-box-content figure{
     padding: 0 15px;
 }
+.product-container{
+    float: left;
+    width: 100%;
+}
+.product-container .slider-nav img{
+    width: 100%;
+}
+.product-container .slick-slide img{
+    margin: 0 auto;
+}
+/* Slick Gallery */
+.slider-for{
+    width: 50%;
+    /*height: 250px;*/
+    margin: 30px auto 1px;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    min-height: 100%;
+}
+.slider-nav{
+    width: 500px;
+    height: 85px;
+    margin: auto;
+}
+.slider-nav .slick-track{
+    height: 85px;
+}
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 50;
+    margin-top: -12px;
+}
+.slick-prev{
+    left: 0;
+}
+.slick-next{
+    right: 0;
+}
+.slick-prev:before, .slick-next:before{
+    color: black !important;
+}
+
+/* DesoSlide Gallery */
+#slideshow_thumbs{
+    margin-top: 20px;
+}
+#slideshow_thumbs li{
+    display: inline-block;
+}
+#slideshow_thumbs img{
+    width: 120px;
+}
