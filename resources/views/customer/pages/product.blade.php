@@ -63,9 +63,9 @@
                     </li>
                     <li>
                         <a class="share-button" href="https://plus.google.com/share?url={{Request::fullUrl()}}" 
-                            onclick="javascript:window.open(this.href, '', 
-                                        'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); 
-                                return false;">
+                           onclick="javascript:window.open(this.href, '',
+                                            'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+                                    return false;">
                             <i class="fab fa-google-plus-square"></i>
                         </a>
                     </li>
@@ -73,30 +73,38 @@
             </div>
         </div>
         <hr/>
-        <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">DESCRIPTION</a></li>
-            <li><a data-toggle="tab" href="#menu1">MORE INFO</a></li>
-            <li><a data-toggle="tab" href="#menu2">MAP</a></li>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Description</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">More Infomation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2">Map</a>
+            </li>
         </ul>
 
+        <!-- Tab panes -->
         <div class="tab-content">
-            <div id="home" class="tab-pane fade in active show">
+            <div id="home" class="container tab-pane active"><br>
                 <h3>Description</h3>
                 <p>{!!$product->description!!}</p>
             </div>
-            <div id="menu1" class="tab-pane fade">
+            <div id="menu1" class="container tab-pane fade"><br>
                 <h3>More Infomation</h3>
                 <div class="row">
                     <ul class="list-amenities-and-features"><li><i class="fa fa-check"></i>Children playground</li><li><i class="fa fa-check"></i>Club house</li><li><i class="fa fa-check"></i>Garden</li><li><i class="fa fa-check"></i>Swimming pool</li><li><i class="fa fa-check"></i>Gym</li><li><i class="fa fa-check"></i>Elevator</li><li><i class="fa fa-check"></i>BBQ</li><li><i class="fa fa-check"></i>Car parking</li></ul>
                 </div>
             </div>
-            <div id="menu2" class="tab-pane fade">
+            <div id="menu2" class="container tab-pane fade"><br>
                 <h3>Map</h3>
                 <div class="map" style="text-align: center;">
                     <iframe src="{{$product->location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
+        <hr/>
     </div>
 </div>
 <!--/main page -->
@@ -110,20 +118,20 @@
 
 <!--http://sylouuu.github.io/desoslide/-->
 <script type="text/javascript">
-    $('#slideshow').desoSlide({
-        thumbs: $('#slideshow_thumbs li > a'),
-        overlay: 'hover',
-        controls: {
-            show: true,
-            keys: true
-        },
-        auto: {
-            start: true
-        },
-        first: 1,
-        interval: 6000,
-        effect: 'none'
-    });
+                                $('#slideshow').desoSlide({
+                                    thumbs: $('#slideshow_thumbs li > a'),
+                                    overlay: 'hover',
+                                    controls: {
+                                        show: true,
+                                        keys: true
+                                    },
+                                    auto: {
+                                        start: true
+                                    },
+                                    first: 1,
+                                    interval: 6000,
+                                    effect: 'none'
+                                });
 </script>
 
 <!--Facebook Share-->

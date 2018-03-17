@@ -7,6 +7,15 @@ and open the template in the editor.
     Created on : Mar 11, 2018, 3:01:32 PM
     Author     : DungLe
 */
+.breadcrumb{
+    background: none;
+}
+.breadcrumb .breadcrumb-item a{
+    color: #6c757d;
+}
+.nav-tabs a{
+    color: #6c757d;
+}
 
 .product-item{
     padding: 15px;
@@ -69,3 +78,4 @@ and open the template in the editor.
     color: #333;
     font-size: 32px;
 }
+

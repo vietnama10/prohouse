@@ -143,10 +143,10 @@ body {
 #main-nav .dropdown-menu a:hover {
 	color: #ec894d;
 }
-.nav-item:hover, .active {
+#main-nav .nav-item:hover, #main-nav .active {
 	background-color: #ec894d;
 }
-.nav-item:hover > a, .active > a {
+#main-nav .nav-item:hover > a, #main-nav .active > a {
 	color: #fff;
 }
 .navbar-toggler-icon {
