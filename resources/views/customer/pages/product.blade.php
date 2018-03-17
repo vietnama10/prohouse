@@ -62,7 +62,7 @@
                         <div id="shareBtn" class="share-button"><i class="fab fa-facebook"></i></div>
                     </li>
                     <li>
-                        <a class="share-button" href="https://plus.google.com/share?url=youtube.com" 
+                        <a class="share-button" href="https://plus.google.com/share?url={{Request::fullUrl()}}" 
                             onclick="javascript:window.open(this.href, '', 
                                         'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'); 
                                 return false;">
