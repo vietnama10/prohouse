@@ -19,7 +19,7 @@ class HomeController extends Controller
         $products = $this->_product::paginate(4);
         $products_by_type = array();
         foreach($this->_type::all() as $type){
-            $products_by_type[] = ['type_name' => $type->name, 'type_url' => $type->url_key, 'products' => $this->_product->getProductsByType($type->id)];
+            $products_by_type[] = ['type_id' => $type->id, 'type_name' => $type->name, 'type_url' => $type->url_key, 'products' => $this->_product->getProductsByType($type->id)];
         }
         return view('customer.pages.home', compact('products', 'products_by_type'));
     }
