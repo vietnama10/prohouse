@@ -126,6 +126,7 @@
     <script src="./public/vendors/starrr/dist/starrr.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="public/build/js/custom.min.js"></script>
+    <script src="public/js/admin-custom.js"></script>
 </body>
 
 </html>

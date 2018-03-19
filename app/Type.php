@@ -8,7 +8,11 @@ class Type extends Model
 {
     //
     protected $tabble = 'types';
-
+    
+    public function typeprojects(){
+        return $this->hasMany('App\TypeProject');
+    }
+    
     public function products(){
         return $this->hasMany('App\Product');
     }

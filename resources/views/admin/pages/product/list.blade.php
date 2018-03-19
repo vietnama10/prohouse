@@ -22,7 +22,7 @@ $type = new Type();
             </div>
             <div class="title_right">
                 <div class="pull-right">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Product</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productCreateModal">Add Product</button>
                 </div>
             </div>
         </div>

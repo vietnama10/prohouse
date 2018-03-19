@@ -1,5 +1,5 @@
 <!-- Modal Create Product -->
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="productCreateModal" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -9,8 +9,13 @@
                 <h4 class="modal-title">Create Product</h4>
             </div>
             <div class="modal-body">
+                <div class="alert alert-danger print-error-msg" style="display:none">
+                    <ul></ul>
+                </div>
+
                 <form data-parsley-validate>
-                    <div class="row">
+                    <input type="hidden" name=""
+                           <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
@@ -29,27 +34,26 @@
                                     <br />
                                     <div id="field_group1" class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Type</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Type
+                                                <span class="required">*</span>
+                                            </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <select class="form-control">
-                                                <option>Choose option</option>
-                                                <option>Option one</option>
-                                                <option>Option two</option>
-                                                <option>Option three</option>
-                                                <option>Option four</option>
-                                            </select>
+                                                <select class="form-control required" name="type" id="type">
+                                                    <option value="">Choose...</option>
+                                                    @foreach($types as $type)
+                                                    <option value="{{$type->id}}">{{$type->name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Project</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Project
+                                                <span class="required">*</span>
+                                            </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <select class="form-control">
-                                                <option>Choose option</option>
-                                                <option>Option one</option>
-                                                <option>Option two</option>
-                                                <option>Option three</option>
-                                                <option>Option four</option>
-                                            </select>
+                                                <select class="form-control required" name="project" id="project">
+                                                    <option value="">Choose...</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -69,7 +73,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Url key
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Url key
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
@@ -81,7 +85,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input id="price" name="price" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="price" name="price" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -97,7 +101,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input id="size" name="size" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="size" name="size" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -105,7 +109,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input id="level" name="level" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="level" name="level" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -113,7 +117,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input id="bedroom" name="bedroom" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="bedroom" name="bedroom" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -121,7 +125,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input id="bathroom" name="bathroom" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="bathroom" name="bathroom" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -139,7 +143,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input id="direction" name="direction" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="direction" name="direction" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -147,7 +151,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input id="location" name="location" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="location" name="location" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -201,7 +205,7 @@
                             <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-4">
                                 <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
                                 <button class="btn btn-primary" type="reset">Reset</button>
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success">Add</button>
                             </div>
                         </div>
                     </div>
