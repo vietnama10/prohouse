@@ -9,13 +9,19 @@
                 <h4 class="modal-title">Create Product</h4>
             </div>
             <div class="modal-body">
-                <div class="alert alert-danger print-error-msg" style="display:none">
-                    <ul></ul>
+                <div class="alert alert-success" id="success_message" style="display: none">
+                    <ul>
+                    </ul>
                 </div>
-
-                <form data-parsley-validate>
-                    <input type="hidden" name=""
-                           <div class="row">
+                <div class="alert alert-danger" id="error_message" style="display: none">
+                    <ul>
+                    </ul>
+                </div>
+                <div id="form_overlay">
+                    <div id="text_overlay">Loading...</div>
+                </div>
+                <form id="demo-form2" data-parsley-validate>
+                    <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
@@ -132,9 +138,11 @@
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Status</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <div class="">
+                                                    <span>Not Available</span>
                                                     <label>
-                                                        <input type="checkbox" class="js-switch" checked />
+                                                        <input type="checkbox" class="js-switch" checked id="status" />
                                                     </label>
+                                                    <span>Available</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -143,15 +151,15 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input id="direction" name="direction" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="direction" name="direction" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Location 
-                                                <span class="required">*</span>
+                                                <span class="required"><small>(map url)</small>*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input id="location" name="location" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                                <input id="location" name="location" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -185,15 +193,29 @@
                                 <div class="x_content">
                                     <br />
                                     <div id="field_group2" class="form-horizontal form-label-left">
-
+                                        @foreach($attributes as $attr)
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Interior
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">{{$attr->name}}
+                                                @if($attr->required)
                                                 <span class="required">*</span>
+                                                @endif
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <input type="text" id="nterior" name="nterior" required="required" class="form-control col-md-7 col-xs-12">
+                                                @if($attr->input_type == "text")
+                                                <input type="{{$attr->input_type}}" id="{{$attr->attribute_tag}}" name="{{$attr->attribute_tag}}" required="{{$attr->required?'required':''}}" class="form-control col-md-7 col-xs-12">
+                                                @elseif($attr->input_type == "select")
+                                                <select class="form-control {{$attr->required?'required':''}}" name="{{$attr->input_type}}" id="{{$attr->input_type}}">
+                                                    <option value="">Choose...</option>
+                                                    @foreach(unserialize($attr->default_value) as $value)
+                                                    <option value="{{$value}}">{{$value}}</option>
+                                                    @endforeach
+                                                </select>
+                                                @endif
+                                                
                                             </div>
                                         </div>
+                                        @endforeach
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -204,8 +226,8 @@
                         <div class="form-group">
                             <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-4">
                                 <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
-                                <button class="btn btn-primary" type="reset">Reset</button>
-                                <button type="submit" class="btn btn-success">Add</button>
+                                <button class="btn btn-primary" id="btn_resetForm" type="reset">Reset</button>
+                                <button id="btn-addProduct" class="btn btn-success">Add</button>
                             </div>
                         </div>
                     </div>

@@ -16,7 +16,7 @@ class CreateTypesTable extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable(false);
-            $table->string('url_key');
+            $table->string('url_key', '100')->unique();
             $table->integer('sort_order')->default(0);
             $table->integer('is_active')->default(1);
             $table->timestamps();

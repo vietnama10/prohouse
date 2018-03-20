@@ -15,7 +15,8 @@ class Attributes extends Seeder
         DB::table('attributes')->insert([
             [
                 'name' => 'Interior',
-                'input_type' => 'text',
+                'attribute_tag' => 'interior',
+                'input_type' => 'select',
                 'is_active' => 1,
                 'required' => 1,
                 'default_value' => 'a:3:{i:0;s:15:"Fully Furnished";i:1;s:16:"A Part Furnished";i:2;s:12:"No Furniture";}'

@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->string('name')->nullable(false);
             $table->string('description');
-            $table->string('url_key');
+            $table->string('url_key', '100')->unique();
             $table->timestamps();
         });
     }

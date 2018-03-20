@@ -16,6 +16,7 @@ class CreateAttributesTable extends Migration
         Schema::create('attributes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('attribute_tag', '100')->unique();
             $table->string('input_type')->default('text');
             $table->integer('is_active')->default(1);
             $table->timestamps();

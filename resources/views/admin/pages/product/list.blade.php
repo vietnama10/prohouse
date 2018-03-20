@@ -90,6 +90,9 @@ $type = new Type();
         </div>
     </div>
 </div>
+@include('admin.pages.product.create')
 @endsection
 
-@include('admin.pages.product.create')
+@section('javascript')
+<script src="public/js/admin/product-form.js"></script>
+@endsection

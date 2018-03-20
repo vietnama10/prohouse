@@ -43,6 +43,7 @@
     <link href="public/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="public/build/css/custom.min.css" rel="stylesheet">
+    <link href="public/css/admin-styles.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -126,7 +127,7 @@
     <script src="./public/vendors/starrr/dist/starrr.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="public/build/js/custom.min.js"></script>
-    <script src="public/js/admin-custom.js"></script>
+    @yield('javascript')
 </body>
 
 </html>

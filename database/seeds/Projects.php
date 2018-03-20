@@ -29,9 +29,9 @@ class Projects extends Seeder
                 'url_key' => 'phu-my-hung'
             ],
             [
-                'name' => 'Green Valley',
-                'description' => 'Green valley description',
-                'url_key' => 'green-valley'
+                'name' => 'Happy Valley',
+                'description' => 'Happy valley description',
+                'url_key' => 'happy-valley'
             ],
             [
                 'name' => 'Sky Garden',

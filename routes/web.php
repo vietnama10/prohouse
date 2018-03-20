@@ -46,5 +46,6 @@ Route::group(['prefix'=>'admin_1a1u', 'middleware'=>'adminlogin'],function(){
     Route::group(['prefix'=>'product'],function(){
         Route::get('/', 'Admin\ProductController@getProductList');
         Route::get('getProjectsOfType', 'Admin\ProductController@getProjectsOfType');
+        Route::post('new', 'Admin\ProductController@postCreateProduct');
     });
 });
