@@ -31,3 +31,12 @@ and open the template in the editor.
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
 }
+.images-preview{
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+}
+.images-preview > img{
+    height: 50px;
+    margin: 5px;
+}

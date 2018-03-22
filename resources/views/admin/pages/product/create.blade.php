@@ -20,7 +20,7 @@
                 <div id="form_overlay">
                     <div id="text_overlay">Loading...</div>
                 </div>
-                <form id="demo-form2" data-parsley-validate>
+                <form id="demo-form2" class="form_CreateProduct" method="POST" action="{{URL::to('/')}}/admin_1a1u/product/new" data-parsley-validate enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
@@ -39,12 +39,13 @@
                                 <div class="x_content">
                                     <br />
                                     <div id="field_group1" class="form-horizontal form-label-left">
+                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Type
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control required" name="type" id="type">
+                                                <select class="form-control required" name="type_id" id="type">
                                                     <option value="">Choose...</option>
                                                     @foreach($types as $type)
                                                     <option value="{{$type->id}}">{{$type->name}}</option>
@@ -57,7 +58,7 @@
                                                 <span class="required">*</span>
                                             </label>
                                             <div class="col-md-8 col-sm-8 col-xs-12">
-                                                <select class="form-control required" name="project" id="project">
+                                                <select class="form-control required" name="project_id" id="project">
                                                     <option value="">Choose...</option>
                                                 </select>
                                             </div>
@@ -90,8 +91,23 @@
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Price
                                                 <span class="required">*</span>
                                             </label>
-                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                            <div class="col-md-5 col-sm-5 col-xs-7">
                                                 <input id="price" name="price" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number">
+                                            </div>
+                                            <div class="control-label col-md-1 col-sm-1 col-xs-1">
+                                                <label>Per</label>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-4">
+                                                <input id="unit" name="unit" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Images
+                                                <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <input id="images" name="images[]" accept="image/*" type="file" multiple class="date-picker form-control col-md-7 col-xs-12" required="required">
+                                                <div class="gallery images-preview"></div>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -140,7 +156,7 @@
                                                 <div class="">
                                                     <span>Not Available</span>
                                                     <label>
-                                                        <input type="checkbox" class="js-switch" checked id="status" />
+                                                        <input type="checkbox" class="js-switch" checked name="status" id="status" />
                                                     </label>
                                                     <span>Available</span>
                                                 </div>
@@ -204,8 +220,14 @@
                                                 @if($attr->input_type == "text")
                                                 <input type="{{$attr->input_type}}" id="{{$attr->attribute_tag}}" name="{{$attr->attribute_tag}}" required="{{$attr->required?'required':''}}" class="form-control col-md-7 col-xs-12">
                                                 @elseif($attr->input_type == "select")
-                                                <select class="form-control {{$attr->required?'required':''}}" name="{{$attr->input_type}}" id="{{$attr->input_type}}">
+                                                <select class="form-control {{$attr->required?'required':''}}" name="{{$attr->attribute_tag}}" id="{{$attr->attribute_tag}}">
                                                     <option value="">Choose...</option>
+                                                    @foreach(unserialize($attr->default_value) as $value)
+                                                    <option value="{{$value}}">{{$value}}</option>
+                                                    @endforeach
+                                                </select>
+                                                @elseif($attr->input_type == "multiselect")
+                                                <select class="form-control {{$attr->required?'required':''}}" multiple="multiple" name="{{$attr->attribute_tag}}" id="{{$attr->attribute_tag}}">
                                                     @foreach(unserialize($attr->default_value) as $value)
                                                     <option value="{{$value}}">{{$value}}</option>
                                                     @endforeach
@@ -227,7 +249,7 @@
                             <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-4">
                                 <button class="btn btn-primary" type="button" data-dismiss="modal">Cancel</button>
                                 <button class="btn btn-primary" id="btn_resetForm" type="reset">Reset</button>
-                                <button id="btn-addProduct" class="btn btn-success">Add</button>
+                                <button id="btn-addProduct" type="submit" class="btn btn-success">Add</button>
                             </div>
                         </div>
                     </div>

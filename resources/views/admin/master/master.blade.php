@@ -56,6 +56,8 @@
 
     <!-- jQuery -->
     <script src="public/vendors/jquery/dist/jquery.min.js"></script>
+    <!--jQuery Form-->
+    <script src="public/vendors/jquery/dist/jquery.form.min.js"></script>
     <!-- Bootstrap -->
     <script src="public/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
