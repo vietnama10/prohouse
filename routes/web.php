@@ -18,6 +18,9 @@ Route::group(['prefix'=>'category'],function(){
 });
 Route::get('product/{product_url_key}', 'ProductController@getProduct');
 Route::get('search', 'SearchController@getSearchResult');
+Route::get('contact-us', 'PageController@contact');
+Route::get('about-us', 'PageController@aboutus');
+Route::get('advance-search', 'PageController@advanceSearch');
 
 /*
 |* Pro House

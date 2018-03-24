@@ -46,51 +46,49 @@
             <h2>Top Properties</h2>
             <div class="row">
                 @foreach($products as $product)
-                    @include('customer.pages.blocks.productitem')
+                @include('customer.pages.blocks.productitem')
                 @endforeach
             </div>
             <span class="see-more"><a href="#">See more...</a></span>
         </div>
-        
-        <!--block products by type-->
 
-            @foreach($products_by_type as $data)
-               @if(count($data['products']) > 0)
-                    <div id="type-data" class="row block">
-                        <h2>{{ $data['type_name'] }}</h2>
-                        <div class="row">
-                            @foreach($data['products'] as $product)
-                                @include('customer.pages.blocks.productitem')
-                            @endforeach
-                        </div>
-                        <span class="see-more"><a href="{{ $data['type_url'] }}">See more...</a></span>
-                    </div>
-                @endif
-            @endforeach
-       
-        
+        <!--block products by type-->
+        @foreach($products_by_type as $data)
+        @if(count($data['products']) > 0)
+        <div id="type-data-{{ $data['type_id'] }}" class="row block">
+            <h2>{{ $data['type_name'] }}</h2>
+            <div class="row">
+                @foreach($data['products'] as $product)
+                @include('customer.pages.blocks.productitem')
+                @endforeach
+            </div>
+            <span class="see-more"><a href="{{ $data['type_url'] }}">See more...</a></span>
+        </div>
+        @endif
+        @endforeach
+
+
         <!-- features -->
         <div id="features" class="row block">
             <div class="col-sm">
-                <a href="#" class="feature-icon"><i class="fas fa-users fa-3x"></i></a>
+                <a href="about-us" class="feature-icon"><i class="fas fa-users fa-3x"></i></a>
                 <h5>about us</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut</p>
-                <a href="#" class="btn btn-dark">read more</a>
+                <p>Our company specializes in providing rental real estate services. We have professional and well-qualified teams of realtors, counselors… working within our company. During the existence in a market we have been trusted and supported from lots of customers and landlords.</p>
+                <a href="about-us" class="btn btn-dark">read more</a>
             </div>
             <div class="col-sm">
-                <a href="#" class="feature-icon"><i class="fas fa-map-marker fa-3x"></i></a>
+                <a href="contact-us" class="feature-icon"><i class="fas fa-map-marker fa-3x"></i></a>
                 <h5>contact us</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut</p>
-                <a href="#" class="btn btn-dark">read more</a>
+                <p>
+                @include('customer.pages.blocks.contact_info')
+                </p>
+                <a href="contact-us" class="btn btn-dark">read more</a>
             </div>
             <div class="col-sm">
-                <a href="#" class="feature-icon"><i class="fas fa-search fa-3x"></i></a>
-                <h5>recruitment</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut</p>
-                <a href="#" class="btn btn-dark">read more</a>
+                <a href="advance-search" class="feature-icon"><i class="fas fa-search fa-3x"></i></a>
+                <h5>advance search</h5>
+                <p>Get advance search for more detail to find out your dream house, which will save your time for you.</p>
+                <a href="advance-search" class="btn btn-dark">read more</a>
             </div>
         </div>
     </div>

@@ -70,6 +70,7 @@
                         </a>
                     </li>
                 </ul>
+                @include('customer.pages.blocks.contact_info')
             </div>
         </div>
         <hr/>
@@ -100,7 +101,7 @@
             <div id="menu2" class="container tab-pane fade"><br>
                 <h3>Map</h3>
                 <div class="map" style="text-align: center;">
-                    <iframe src="{{$product->location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="{{$product->location}}" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

@@ -81,4 +81,11 @@ and open the template in the editor.
     color: #6c757d;
 }
 
-
+#contactPage #canvasMap{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.contact-info svg{
+    margin-right: 15px; 
+}

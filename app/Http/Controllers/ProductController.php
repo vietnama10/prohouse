@@ -32,7 +32,7 @@ class ProductController extends Controller
                             </nav>';
             return view('customer.pages.product', compact('product', 'breadcrumb', 'title'));
         }else{
-            return view('customer.pages.404');
+            return view('errors.404');
         }
         
     }

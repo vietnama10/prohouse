@@ -38,7 +38,7 @@ class CategoryController extends Controller
                             </nav>';
             return view('customer.pages.category', compact('products', 'breadcrumb', 'title'));
         }else{
-            return view('customer.pages.404');
+            return view('errors.404');
         }
     }
     
@@ -59,7 +59,7 @@ class CategoryController extends Controller
                             </nav>';
             return view('customer.pages.category', compact('products', 'breadcrumb', 'title'));
         }else{
-            return view('customer.pages.404');
+            return view('errors.404');
         }
     }
 }

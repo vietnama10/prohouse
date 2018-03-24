@@ -85,6 +85,8 @@ body {
 	border-top: solid 1px #dedede;
 	width: 100%;
 	margin: 0;
+        font-size: 13px;
+        font-weight: 500;
 }
 .product-properties span {
 	border-right: solid 1px #dedede;
@@ -95,7 +97,7 @@ body {
 }
 
 #features {
-	border-top: solid 1px #ddd;
+	/*border-top: solid 1px #ddd;*/
 	border-bottom: solid 1px #ddd;
 }
 .feature-icon {
@@ -219,7 +221,7 @@ body {
 }
 .footer h6 {
 	text-transform: uppercase;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 /*responsive*/
