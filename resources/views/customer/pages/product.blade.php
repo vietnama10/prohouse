@@ -70,7 +70,11 @@
                         </a>
                     </li>
                 </ul>
-                @include('customer.pages.blocks.contact_info')
+                <hr/>
+                <div class="contact">
+                    <p><strong>Contact Us: </strong><br/></p>
+                    @include('customer.pages.blocks.contact_info')
+                </div>
             </div>
         </div>
         <hr/>

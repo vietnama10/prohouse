@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('sku','50')->unique();
             $table->string('url_key', '100')->unique();
             $table->string('name');
+            $table->string('short_description', '150')->default('');
             $table->string('description', '800');
             $table->float('price');
             $table->string('unit');

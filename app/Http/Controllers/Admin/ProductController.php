@@ -70,6 +70,7 @@ class ProductController extends Controller {
             'price' => 'required',
             'unit' => 'required',
             'images' => 'required',
+            'short_description' => 'required|max:150',
             'description' => 'required|max:800',
             'size' => 'required|numeric',
             'level' => 'required|numeric',
@@ -94,6 +95,7 @@ class ProductController extends Controller {
                 $this->_product->url_key = $request->url_key;
                 $this->_product->price = (float)$request->price;
                 $this->_product->unit = $request->unit;
+                $this->_product->short_description = $request->short_description;
                 $this->_product->description = $request->description;
                 $this->_product->size = (int)$request->size;
                 $this->_product->level = (int)$request->level;

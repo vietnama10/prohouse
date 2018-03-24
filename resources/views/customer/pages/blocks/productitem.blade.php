@@ -15,7 +15,7 @@
             </div>
             <div class="col-sm">
                 <p class="price">Price: {{App\Helpers\LayoutHelper::product_price($product->price) }} / {{$product->unit}}</p>
-                <p class="description">{!! $product->description !!}</p>
+                <p class="description">{!! $product->short_description !!}</p>
                 <span class="see-more"><a href="product/{{ $product->url_key }}">More details</a></span>
             </div>
         </figure>

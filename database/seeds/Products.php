@@ -16,6 +16,7 @@ class Products extends Seeder
             [
                 'sku' => 'apm1',
                 'name' => 'Single Home At Florida 5, Pinecrest',
+                'short_description' => 'Beautiful home on quiet, tree lined street. Addition and renovation create desirable.',
                 'description' => 'Beautiful home on quiet, tree lined street. Addition and renovation create desirable.',
                 'price' => 800,
                 'unit' => 'month',
@@ -34,6 +35,7 @@ class Products extends Seeder
             [
                 'sku' => 'apm2',
                 'name' => 'Villa On Grand Avenue',
+                'short_description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.',
                 'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.',
                 'price' => 650,
                 'unit' => 'month',
@@ -52,6 +54,7 @@ class Products extends Seeder
             [
                 'sku' => 'apm3',
                 'name' => '1903 Hollywood Boulevard',
+                'short_description' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
                 'description' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
                 'price' => 900,
                 'unit' => 'month',
@@ -70,6 +73,7 @@ class Products extends Seeder
             [
                 'sku' => 'apm4',
                 'name' => 'Villa In Hialeah, Dade County',
+                'short_description' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
                 'description' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
                 'price' => 28000,
                 'unit' => 'unit',
@@ -88,6 +92,7 @@ class Products extends Seeder
             [
                 'sku' => 'apm5',
                 'name' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+                'short_description' => 'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.',
                 'description' => 'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.',
                 'price' => 35000,
                 'unit' => 'unit',

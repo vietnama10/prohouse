@@ -111,6 +111,14 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Short Description
+                                                <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                                <textarea id="short_description" name="short_description" class="date-picker form-control col-md-7 col-xs-12" required="required" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Description
                                                 <span class="required">*</span>
                                             </label>

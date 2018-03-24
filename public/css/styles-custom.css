@@ -7,6 +7,12 @@ and open the template in the editor.
     Created on : Mar 11, 2018, 3:01:32 PM
     Author     : DungLe
 */
+
+/*Font Size*/
+/*#features p, footer p, .product-box .description{
+    font-size: 13px;
+}*/
+
 .breadcrumb{
     background: none;
 }
