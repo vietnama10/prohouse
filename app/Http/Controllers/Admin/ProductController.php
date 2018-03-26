@@ -25,10 +25,8 @@ class ProductController extends Controller {
     protected $_attributevalue;
 
     public function __construct(
-            Product $product, Type $type, TypeProject $type_project, 
-            Project $project, Attribute $attribute,
-            ProductImage $productimage, AttributeValue $attributevalue
-            ) {
+    Product $product, Type $type, TypeProject $type_project, Project $project, Attribute $attribute, ProductImage $productimage, AttributeValue $attributevalue
+    ) {
         $this->_attribute = $attribute;
         $this->_product = $product;
         $this->_type = $type;
@@ -36,14 +34,13 @@ class ProductController extends Controller {
         $this->_project = $project;
         $this->_productimage = $productimage;
         $this->_attributevalue = $attributevalue;
-        
     }
 
     public function getProductList() {
-        $products = $this->_product::all();
-        $types = $this->_type::all();
+        $products = $this->_product->getAll();
+        $types = $this->_type->getAll();
         $attributes = $this->_attribute::where('is_active', '=', 1)->get();
-        return view('admin.pages.product.list', compact('products', 'types', 'attributes'));
+        return view('admin.pages.product', compact('products', 'types', 'attributes'));
     }
 
     public function getProjectsOfType(Request $req) {
@@ -51,7 +48,7 @@ class ProductController extends Controller {
         if (isset($req->type)) {
             $typeprojects = $this->_typeproject::where('type_id', '=', $req->type)->get();
             foreach ($typeprojects as $typeproject) {
-                $result .= '<option value="' . $typeproject->project_id . '">' . $this->_project::find($typeproject->project_id)->name . '</option>';
+                $result .= '<option value="' . $typeproject->project_id . '">' . $this->_project->getProjectById($typeproject->project_id)->name . '</option>';
             }
             return $result;
         } else {
@@ -101,7 +98,7 @@ class ProductController extends Controller {
                 $this->_product->level = (int)$request->level;
                 $this->_product->bedroom = (int)$request->bedroom;
                 $this->_product->bathroom = (int)$request->bathroom;
-                $this->_product->status = (int)$request->status;
+                $this->_product->status = ($request->status=='on') ? 1 : 0;
                 $this->_product->direction = $request->direction;
                 $this->_product->location = $request->location;
                 $this->_product->address = $request->address;
@@ -133,7 +130,7 @@ class ProductController extends Controller {
             }catch (\Exception $e) {
                 return response()->json(['errors'=>[$e->getMessage()], 'status' => 0]);
             }
-            return response()->json(['success' => 'Product has been created.', 'status' => 1, 'count' => count($request->file('images'))]);
+            return response()->json(['success' => 'Product has been created.', 'status' => 1]);
         } else {
             return response()->json(['errors' => $validator->errors(), 'status' => 0]);
         }

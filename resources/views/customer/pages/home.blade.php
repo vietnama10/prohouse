@@ -80,7 +80,8 @@
                 <a href="contact-us" class="feature-icon"><i class="fas fa-map-marker fa-3x"></i></a>
                 <h5>contact us</h5>
                 <p>
-                @include('customer.pages.blocks.contact_info')
+                Thank you for comming with SweetHouse! If this is an urgent matter please contact us for supporting by
+                our connecting info below.
                 </p>
                 <a href="contact-us" class="btn btn-dark">read more</a>
             </div>

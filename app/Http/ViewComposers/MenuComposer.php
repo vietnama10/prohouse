@@ -14,8 +14,8 @@ use App\TypeProject;
 
 class MenuComposer
 {
-    protected $types;
-    protected $type_projects;
+    protected $_types;
+    protected $_type_projects;
     /**
      * Create a movie composer.
      *
@@ -23,8 +23,8 @@ class MenuComposer
      */
     public function __construct(Type $types, TypeProject $type_projects)
     {
-        $this->types = $types;
-        $this->type_projects = $type_projects;
+        $this->_types = $types;
+        $this->_type_projects = $type_projects;
     }
 
     /**
@@ -36,10 +36,10 @@ class MenuComposer
     public function compose(View $view)
     {
         $menu_result = array();
-        $types = $this->types->getAll();
+        $types = $this->_types->getAll()->where('is_active', '=', 1);
         foreach($types as $type){
             $project_ids = array();
-            $type_projects = $this->type_projects->getTypeProjectByTypeId($type->id);
+            $type_projects = $this->_type_projects->getTypeProjectByTypeId($type->id);
             foreach($type_projects as $tp){
                 $project_ids[] = $tp->project_id;
             }

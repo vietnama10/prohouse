@@ -39,11 +39,13 @@ Route::group(['prefix'=>'admin_1a1u', 'middleware'=>'adminlogin'],function(){
     });
     // Group Route for Type
     Route::group(['prefix'=>'type'],function(){
-        
+        Route::get('/', 'Admin\TypeController@getTypeList');
+        Route::post('new', 'Admin\TypeController@postCreateType');
     });
     // Group Route for Project
     Route::group(['prefix'=>'project'],function(){
-        
+        Route::get('/', 'Admin\ProjectController@getProjectList');
+        Route::post('new', 'Admin\ProjectController@postCreateProject');
     });
     // Group Route for Product
     Route::group(['prefix'=>'product'],function(){
