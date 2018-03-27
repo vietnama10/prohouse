@@ -1,9 +1,11 @@
 <?php 
 use App\Type;
 use App\Project;
+use App\Helpers\LayoutHelper;
 
 $type = new Type();
 $project = new Project();
+$helper = new LayoutHelper();
 
 ?>
 <!-- header -->
@@ -16,13 +18,13 @@ $project = new Project();
                 <div class="row">
                     <!-- email contact -->
                     <div id="email-contact" class="col-sm">
-                        <a href="#"><i class="far fa-envelope-open"></i>Email us at: example@somemail.com</a>
+                        <a href="mailto:{{$helper->config_value_by_tag('cf_email')}}"><i class="far fa-envelope-open"></i>Email us at: {{$helper->config_value_by_tag('cf_email')}}</a>
                     </div>
                     <!-- social networks -->
                     <div id="social-networks" class="col-sm">
                         <ul class="nav justify-content-end">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="nav-link" href="{{$helper->config_value_by_tag('cf_facebook')}}"><i class="fab fa-facebook-f"></i></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
@@ -39,7 +41,7 @@ $project = new Project();
                 <!-- logo -->
                 <div id="logo" class="col-xl-3 text-center">
                     <a href="{{url('/')}}">
-                        <img src="public/images/logo.png" class="img-fluid">
+                        <img src="public/images/{{$helper->config_value_by_tag('cf_logo')}}" class="img-fluid">
                     </a>
                 </div>
                 <!-- navigation -->
@@ -71,7 +73,7 @@ $project = new Project();
                             @endforeach
                             <li class="nav-item phone-number">
                                 <span class="phone-icon"><i class="fas fa-phone"></i></span>
-                                <span><strong>01208 000 698</strong></span>
+                                <span><strong>{{$helper->config_value_by_tag('cf_mobilenumber')}}</strong></span>
                             </li>
                         </ul>
                     </div>

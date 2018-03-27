@@ -1,5 +1,10 @@
+<?php
+use App\Helpers\LayoutHelper;
+
+$helper = new LayoutHelper();
+?>
 @extends ('customer.master.master')
-@section('title', 'Apartment, Villa, Office for rent in Ho Chi Minh')
+@section('title', $helper->config_value_by_tag('cf_hometitle'))
 
 @section('Main')
 <!-- slide -->
@@ -73,14 +78,14 @@
             <div class="col-sm">
                 <a href="about-us" class="feature-icon"><i class="fas fa-users fa-3x"></i></a>
                 <h5>about us</h5>
-                <p>Our company specializes in providing rental real estate services. We have professional and well-qualified teams of realtors, counselors… working within our company. During the existence in a market we have been trusted and supported from lots of customers and landlords.</p>
+                <p>We have professional and well-qualified teams of realtors, counselors…. During the existence in a market we have been trusted and supported from lots of customers and landlords.</p>
                 <a href="about-us" class="btn btn-dark">read more</a>
             </div>
             <div class="col-sm">
                 <a href="contact-us" class="feature-icon"><i class="fas fa-map-marker fa-3x"></i></a>
                 <h5>contact us</h5>
                 <p>
-                Thank you for comming with SweetHouse! If this is an urgent matter please contact us for supporting by
+                Thank you so much for comming with Sweet House. If this is an urgent matter please contact us for supporting by
                 our connecting info below.
                 </p>
                 <a href="contact-us" class="btn btn-dark">read more</a>
@@ -88,7 +93,7 @@
             <div class="col-sm">
                 <a href="advance-search" class="feature-icon"><i class="fas fa-search fa-3x"></i></a>
                 <h5>advance search</h5>
-                <p>Get advance search for more detail to find out your dream house, which will save your time for you.</p>
+                <p>Let's use advance search for extra details, which will save your time to find out your dream house, the office or the land.</p>
                 <a href="advance-search" class="btn btn-dark">read more</a>
             </div>
         </div>

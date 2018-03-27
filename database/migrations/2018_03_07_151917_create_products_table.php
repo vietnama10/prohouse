@@ -28,7 +28,7 @@ class CreateProductsTable extends Migration
             $table->integer('bathroom');
             $table->integer('status');
             $table->string('direction');
-            $table->string('location', '500');
+            $table->string('location', '700');
             $table->string('address');
             $table->integer('type_id')->unsigned();
             $table->foreign('type_id')

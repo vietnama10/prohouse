@@ -18,8 +18,8 @@
 			</div>
 			<div class="col-sm">
 				<h6>police terms</h6>
-                                <p><a href="#" title="Police terms">Police terms</a></p>
-                                <p><a href='#' title="Protected">Protected</a></p>
+                                <p><a href="police-terms" title="Police terms">Police terms</a></p>
+                                <p>Sweet House Copyright © {{date("Y")}}. All Rights Reserved.</p>
 			</div>
 		</div>
 	</div>
