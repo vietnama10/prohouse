@@ -37,6 +37,12 @@ Route::group(['prefix'=>'admin_1a1u', 'middleware'=>'adminlogin'],function(){
     Route::get('/', function(){
         return view('admin.pages.home');
     });
+    //
+    Route::group(['prefix'=>'config'],function(){
+        Route::get('/', 'Admin\ConfigController@getConfigPage');
+        Route::get('getAllConfig', 'Admin\ConfigController@getAllConfig');
+        Route::post('save', 'Admin\ConfigController@postSaveConfigs');
+    });
     // Group Route for Type
     Route::group(['prefix'=>'type'],function(){
         Route::get('/', 'Admin\TypeController@getTypeList');

@@ -31,10 +31,10 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li><a href="admin_1a1u/type/"><i class="fa fa-th-list"></i> Type </a></li>
-                    <li><a href="admin_1a1u/project/"><i class="fa fa-building-o"></i> Project</a></li>
-                    <li><a href="admin_1a1u/product/"><i class="fa fa-product-hunt"></i> Product </a></li>
-                    <li><a href="admin_1a1u/config/"><i class="fa fa-cog"></i> Config</span></a></li>
+                    <li><a href="admin_1a1u/type/"><i class="fa fa-th-list"></i> Types </a></li>
+                    <li><a href="admin_1a1u/project/"><i class="fa fa-building-o"></i> Projects</a></li>
+                    <li><a href="admin_1a1u/product/"><i class="fa fa-product-hunt"></i> Products </a></li>
+                    <li><a href="admin_1a1u/config/"><i class="fa fa-cog"></i> Configurations</a></li>
                 </ul>
             </div>
         </div>

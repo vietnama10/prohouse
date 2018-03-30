@@ -35,8 +35,8 @@ $(document).ready(function () {
     });
 
     // jQuery ajaxForm when submit form
-    ajaxSubmitForm('.form_CreateProduct', '#error_message', '#success_message' );
-    
+    ajaxSubmitForm('.form_CreateProduct', '#error_message', '#success_message');
+
     //Reset Form
     $('#btn_resetForm').click(function () {
         $('.form_CreateProduct')[0].reset();
@@ -48,31 +48,63 @@ $(document).ready(function () {
 //Add Type, Project
 $(document).ready(function () {
     // jQuery ajaxForm when submit form
-    ajaxSubmitForm('.form_CreateType', '#error_message', '#success_message' );
+    ajaxSubmitForm('.form_CreateType', '#error_message', '#success_message');
     // jQuery ajaxForm when submit form
-    ajaxSubmitForm('.form_CreateProject', '#error_message', '#success_message' );
+    ajaxSubmitForm('.form_CreateProject', '#error_message', '#success_message');
 });
 
-function ajaxSubmitForm(form, error_message, success_message){
-    $(form).ajaxForm(function(result){
+//Load and Save COnfig page
+$(document).ready(function () {
+    if ($('body').find('#configPage').length !== 0) {
+        $('#form_overlay').show();
+        $.ajax({
+            url: baseUrl + "config/getAllConfig",
+            type: "get",
+            success: function (result) {
+                var skip_binding = ["cf_logo"];
+                if (result.length !== 0) {
+                    //binding data
+                    $.each(result, function (key, value) {
+                        if (skip_binding.indexOf(value.config_tag) === -1) {
+                            $('.form_SaveConfigs').find('#' + value.config_tag).val(value.config_value);
+                        } else {
+                            $('.images-preview').append('<img src="public/images/' + value.config_value + '" alt="Logo"/>');
+                            $('#current_logo').val(value.config_value);
+                        }
+                    });
+                    $('#form_overlay').hide();
+                }
+            }
+        });
+    }
+
+    ajaxSubmitForm('.form_SaveConfigs', '#error_message', '#success_message', 0);
+});
+
+function ajaxSubmitForm(form, error_message, success_message, form_reset = 1) {
+    $(form).ajaxForm(function (result) {
         $(error_message).hide();
         $(success_message).hide();
+        $('#form_overlay').show();
         if (result.status === 0) {
             $(error_message).show();
-            $(error_message+' ul').empty();
+            $(error_message + ' ul').empty();
             $.each(result.errors, function (key, val) {
-                $(error_message+' ul').append('<li>' + val + '</li>');
+                $(error_message + ' ul').append('<li>' + val + '</li>');
             });
         }
         if (result.status === 1) {
             $(success_message).show();
-            $(success_message+' ul').empty();
-            $(success_message+' ul').append('<li>' + result.success + '</li>');
+            $(success_message + ' ul').empty();
+            $(success_message + ' ul').append('<li>' + result.success + '</li>');
             // reset form
-            $(form)[0].reset();
-            $('.images-preview').empty();
+            if (form_reset) {
+                $(form)[0].reset();
+                $('.images-preview').empty();
+            }
         }
-        $('.modal').animate({scrollTop: '0px'}, 1000);
+        $('.modal, body').animate({scrollTop: '0px'}, 1000);
+        $('#form_overlay').hide();
         console.log(result);
     });
 }

@@ -35,6 +35,7 @@ and open the template in the editor.
     float: left;
     width: 100%;
     margin: 10px 0;
+    border: dashed 1px #ccc;
 }
 .images-preview > img{
     height: 50px;
