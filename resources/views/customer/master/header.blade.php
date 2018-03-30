@@ -40,7 +40,7 @@ $helper = new LayoutHelper();
             <div class="row">
                 <!-- logo -->
                 <div id="logo" class="col-xl-3 text-center">
-                    <a href="{{url('/')}}">
+                    <a href="/">
                         <img src="public/images/{{$helper->config_value_by_tag('cf_logo')}}" class="img-fluid">
                     </a>
                 </div>

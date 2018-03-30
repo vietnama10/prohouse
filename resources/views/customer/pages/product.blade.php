@@ -114,9 +114,9 @@
 @endsection
 
 @section('javascript')
-<script src="./public/vendors/desoslider/js/vendor/bootstrap/bootstrap.min.js"></script>
-<script src="./public/vendors/desoslider/js/vendor/highlight/highlight.pack.js"></script>
-<script src="./public/vendors/desoslider/js/jquery.desoslide.min.js"></script>
+<script src="public/vendors/desoslider/js/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="public/vendors/desoslider/js/vendor/highlight/highlight.pack.js"></script>
+<script src="public/vendors/desoslider/js/jquery.desoslide.min.js"></script>
 
 <!--http://sylouuu.github.io/desoslide/-->
 <script type="text/javascript">

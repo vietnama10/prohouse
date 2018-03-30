@@ -1,5 +1,5 @@
 <div class="contact-form">
-    <form id="contact_form" class="form_SendContact" method="POST" action="{{URL::to('/')}}/send_contact" enctype="multipart/form-data">
+    <form id="contact_form" class="form_SendContact" method="POST" action="send_contact" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="email">Email</label>
@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
             <label for="phone">Phone number</label>
-            <input type="number" class="form-control" id="phone" name="phone" aria-describedby="textHelp" placeholder="Your phone">
+            <input type="number" class="form-control" id="phone" name="phone" required aria-describedby="textHelp" placeholder="Your phone">
         </div>
         <div class="form-group">
             <label for="phone">Message</label>
