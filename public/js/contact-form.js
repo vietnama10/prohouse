@@ -13,18 +13,19 @@ $(document).ready(function () {
 
 function ajaxSubmitForm(form, form_reset = 1) {
     $(form).ajaxForm(function (result) {
+        console.log(result);
         if (result.status === 0) {
-           var errors = "";
-           $.each(result.errors, function(val){
-              errors += val; 
-           });
-           alert(errors);
+            var errors = "ERRORS: ";
+            $.each(result.errors, function (key, val) {
+                errors += val;
+            });
+            alert(errors);
         }
         if (result.status === 1) {
             alert(result.success);
-        }
-        if(form_reset){
-            $(form)[0].reset();
+            if (form_reset) {
+                $(form)[0].reset();
+            }
         }
 //        console.log(result);
     });

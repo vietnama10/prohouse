@@ -22,6 +22,3 @@
         </div>
     </form>
 </div>
-@section('javascript')
-<script src="public/js/contact-form.js"></script>
-@endsection

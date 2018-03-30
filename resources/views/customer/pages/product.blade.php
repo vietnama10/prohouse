@@ -114,7 +114,6 @@
 @endsection
 
 @section('javascript')
-<script src="./public/vendors/desoslider/js/vendor/jquery/jquery.js"></script>
 <script src="./public/vendors/desoslider/js/vendor/bootstrap/bootstrap.min.js"></script>
 <script src="./public/vendors/desoslider/js/vendor/highlight/highlight.pack.js"></script>
 <script src="./public/vendors/desoslider/js/jquery.desoslide.min.js"></script>

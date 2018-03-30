@@ -18,6 +18,7 @@ class MessageController extends Controller
         $rules = [
             'name' => 'required',
             'email' => 'required|email',
+            'phone' => 'required',
             'message' => 'required|max:500|min:50'
         ];
         $messages = [];
