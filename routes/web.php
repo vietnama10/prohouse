@@ -32,6 +32,9 @@ Route::get('admin_1a1u/login','Admin\AdminController@getAdminLogin');
 Route::post('admin_1a1u/checklogin','Admin\AdminController@checkAdminLogin');
 Route::get('admin_1a1u/logout','Admin\AdminController@LogOut');
 
+//Contact Us Form
+Route::post('send_contact', 'Admin\MessageController@saveMessage');
+
 // Backend Route
 Route::group(['prefix'=>'admin_1a1u', 'middleware'=>'adminlogin'],function(){
     Route::get('/', function(){
